@@ -1,5 +1,5 @@
 .c-instruction{
-    padding: 80px 60px;
+    padding: 100px 0px;
     background-image: url('../../../../img/instruction/background-instruction.png');
     display:flex ;
     flex-direction: column;
@@ -36,7 +36,7 @@
         border-radius: 30px;
         text-decoration: none;
         position: absolute;
-        bottom: 0px;
+        bottom: -20px;
         color: #F1F1F1;
     }
 }

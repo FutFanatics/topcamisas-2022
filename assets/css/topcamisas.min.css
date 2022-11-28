@@ -1080,7 +1080,7 @@ p {
 }
 
 .c-instruction {
-  padding: 80px 60px;
+  padding: 100px 0px;
   background-image: url("../../../../img/instruction/background-instruction.png");
   display: flex;
   flex-direction: column;
@@ -1113,8 +1113,12 @@ p {
   border-radius: 30px;
   text-decoration: none;
   position: absolute;
-  bottom: 0px;
+  bottom: -20px;
   color: #F1F1F1;
+}
+
+.c-shirt_year {
+  padding: 60px 0px;
 }
 
 /*# sourceMappingURL=topcamisas.min.css.map */
