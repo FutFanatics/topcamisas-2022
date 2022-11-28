@@ -1051,6 +1051,7 @@ p {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
   justify-content: center;
 }
 .c-home .title-home {
@@ -1072,10 +1073,19 @@ p {
   color: #9C7A47;
   font-size: 16px;
 }
+.c-home .box-selo {
+  position: absolute;
+  bottom: -45px;
+  z-index: 9;
+}
 
 .c-instruction {
   padding: 80px 60px;
   background-image: url("../../../../img/instruction/background-instruction.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 .c-instruction .text-instruction {
   letter-spacing: 8px;
@@ -1086,6 +1096,25 @@ p {
 .c-instruction .text-instruction-strong {
   font-weight: 700;
   line-height: 2rem;
+}
+.c-instruction .instruction__slick {
+  margin-top: 56px;
+  justify-content: space-around;
+}
+.c-instruction .instruction__slick .content-instruction {
+  text-align: center;
+  color: #484848;
+  margin-top: 32px;
+  font-size: 18px;
+}
+.c-instruction .button-instruction {
+  background: linear-gradient(#9C7A47 0%, #CBA265 100%);
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0px;
+  color: #F1F1F1;
 }
 
 /*# sourceMappingURL=topcamisas.min.css.map */

@@ -1,6 +1,10 @@
 .c-instruction{
     padding: 80px 60px;
     background-image: url('../../../../img/instruction/background-instruction.png');
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 
     .text-instruction{
         letter-spacing: 8px;
@@ -12,5 +16,27 @@
             font-weight: 700;
             line-height: 2rem;
         }
+    }
+
+    .instruction__slick {
+        margin-top: 56px;
+        justify-content: space-around;
+
+        .content-instruction{
+            text-align: center;
+            color: #484848;
+            margin-top: 32px;
+            font-size: 18px;
+        }
+    }
+
+    .button-instruction{
+        background: linear-gradient( #9C7A47 0%, #CBA265 100% );
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        position: absolute;
+        bottom: 0px;
+        color: #F1F1F1;
     }
 }

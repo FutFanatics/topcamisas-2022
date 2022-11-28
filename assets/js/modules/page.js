@@ -5,185 +5,34 @@
 	// 	lazyClass: 'lazy',
 	// }).fire();
 
-	var containerHistoria = $('.historia__slick')
+	var containerinstruction= $('.instruction__slick')
 	var containerArtilheiros = $('.artilheiros-slick')
 	var navArtilheiros = $('.artilheiros-nav')
-	var containerUniformes = $('.uniformes-slick')
-	var containerCuriosidade = $('.curiosidade-slick')
-	var containerBolas = $('.bola__slick')
-	var containerBolasNav = $('.bola__nav')
-	var containerTimeline = $('.timeline__slick')
-	var containerTimelineNav = $('.timeline__nav')
 
-	containerHistoria.slick({
+
+	containerinstruction.slick({
 		autoplay: false,
 		autoplaySpeed: 4000,
 		pauseOnFocus: false,
 		pauseOnHover: false,
-		arrows: true,
+		arrows: false,
 		dots: false,
 		adaptiveHeight: true,
-		slidesToShow: 1,
+		slidesToShow: 3,
 		slidesToScroll: 1,
-        prevArrow: $('.slick-nav_historia').find('.slick-prev'),
-        nextArrow: $('.slick-nav_historia').find('.slick-next'),
-		//prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
-		//nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
 		responsive: [{
 			breakpoint: 768,
 			settings: {
-			}
+				slidesToShow: 1,
+				slidesToScroll: 1,
+
+						}
 			
 			}]
-	}).on('afterChange', function(event, slick, currentSlide, nextSlide){
-			var current = currentSlide + 1;
-			$('.slick-nav_historia').find('.slick-numbers .current').html(current < 10 ? "0" + current : current)}
-    );
+	})
 
-	containerCuriosidade.slick({
-		autoplay: false,
-		autoplaySpeed: 4000,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		arrows: false,
-		dots: true,
-		adaptiveHeight: true,
-		slidesToShow: 4,
-		slidesToScroll: 4,
-		rows: 2,
-		//prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
-		//nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
-		responsive: [{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 3,
-				rows: 1,
-                vertical: true,
-                verticalSwiping: true,
-                
-			}
-		}]
-	});
 
-	containerArtilheiros.slick({
-		autoplay: false,
-		autoplaySpeed: 4000,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		arrows: false,
-		dots: true,
-		adaptiveHeight: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		//prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
-		//nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
-		responsive: [{
-			breakpoint: 768,
-			settings: {
-			}
-			
-		}]
-	});
 
-	containerUniformes.slick({
-		autoplay: false,
-		autoplaySpeed: 4000,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		arrows: true,
-		dots: false,
-		adaptiveHeight: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		prevArrow: $('.slick-nav_uniforme').find('.slick-prev'),
-        nextArrow: $('.slick-nav_uniforme').find('.slick-next'),
-		//prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
-		//nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
-		responsive: [{
-			breakpoint: 768,
-			settings: {
-			}
-			
-		}]
-		
-	}).on('afterChange', function(event, slick, currentSlide, nextSlide){
-		var current = currentSlide + 1;
-		$('.slick-nav_uniforme').find('.slick-numbers .current').html(current < 10 ? "0" + current : current)});
-	
-
-    containerBolas.slick({
-        autoplay: false,
-        asNavFor: '.bola__nav',
-        autoplaySpeed: 4000,
-        pauseOnFocus: false,
-        pauseOnHover: false,
-        arrows: false,
-        dots: false,
-        adaptiveHeight: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-            }
-            
-        }]
-    });
-    containerBolasNav.slick({
-        centerMode: true,
-        asNavFor: '.bola__slick',
-        slidesToShow: 11,
-        arrows: true,
-        dots: false,
-        focusOnSelect: true,
-		prevArrow: '<button class="slick-prev slick-arrow" type="button"><img class="icon-arrow-left" src="img/seta_esquerda.svg"></button>',
-		nextArrow: '<button class="slick-next slick-arrow" type="button"><img class="icon-arrow-right" src="img/seta_direita.svg">',
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                arrows: true,
-                centerMode: true,
-                slidesToShow: 1,
-				prevArrow: '<button class="slick-prev slick-arrow" type="button"><img class="icon-arrow-left" src="img/seta_esquerda.svg"></button>',
-       			nextArrow: '<button class="slick-next slick-arrow" type="button"><img class="icon-arrow-right" src="img/seta_direita.svg">'
-            }
-        }]
-    });
-
-	containerTimeline.slick({
-		autoplay: false,
-		asNavFor: '.timeline__nav',
-        autoplaySpeed: 4000,
-        pauseOnFocus: false,
-        pauseOnHover: false,
-        arrows: false,
-        dots: false,
-        adaptiveHeight: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-	});
-	
-	containerTimelineNav.slick({
-        centerMode: true,
-        asNavFor: '.timeline__slick',
-        slidesToShow: 11,
-        arrows: true,
-        dots: false,
-        focusOnSelect: true,
-		prevArrow: '<button class="slick-prev slick-arrow" type="button"><img class="icon-arrow-left" src="img/seta_esquerda.svg"></button>',
-		nextArrow: '<button class="slick-next slick-arrow" type="button"><img class="icon-arrow-right" src="img/seta_direita.svg">',
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                arrows: true,
-                centerMode: true,
-                slidesToShow: 1,
-				prevArrow: '<button class="slick-prev slick-arrow" type="button"><img class="icon-arrow-left" src="img/seta_esquerda.svg"></button>',
-       			nextArrow: '<button class="slick-next slick-arrow" type="button"><img class="icon-arrow-right" src="img/seta_direita.svg">'
-            }
-        }]
-    });
 
 	
 

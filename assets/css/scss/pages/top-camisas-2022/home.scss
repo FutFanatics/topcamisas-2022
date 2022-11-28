@@ -6,6 +6,7 @@ p{
     min-height: 100vh;
     display: flex;
     align-items:center ;
+    position: relative;
     justify-content: center;
 
     .title-home{
@@ -29,4 +30,10 @@ p{
         color: #9C7A47;
         font-size: 16px;
     }
+    .box-selo{
+        position: absolute;
+        bottom: -45px;
+        z-index: 9;
+    }
+        
 }
