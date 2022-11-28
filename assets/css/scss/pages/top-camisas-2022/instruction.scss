@@ -1,0 +1,16 @@
+.c-instruction{
+    padding: 80px 60px;
+    background-image: url('../../../../img/instruction/background-instruction.png');
+
+    .text-instruction{
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 18px;
+
+        &-strong{
+            font-weight: 700;
+            line-height: 2rem;
+        }
+    }
+}
