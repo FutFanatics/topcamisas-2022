@@ -1,3 +1,8 @@
+
+@mixin md{
+    @media (min-width: 1200px) { @content; }
+}
+
 p{
     margin-bottom: 0px;
 }
@@ -8,18 +13,37 @@ p{
     align-items:center ;
     position: relative;
     justify-content: center;
+    padding: 30px 0px;
+
+    @include md{
+        padding: 0px;
+    }
 
     .title-home{
         color: #9C7A47;
         font-weight: 700;
-        font-size: 50px;
+        font-size: 35px;
         text-transform: uppercase;
+        padding-bottom: 32px;
+
+        @include md{
+            font-size: 50px;
+            padding-bottom: 0px;
+        }
 
         &-top{
             font-weight: 300;
             letter-spacing: 15px;
-            font-size: 25px;
-           
+            font-size: 20px;
+            line-height: 1rem;
+            padding-top: 16px;
+            padding-bottom: 0px;
+            
+
+            @include md{
+                padding-top: 0px;
+                font-size: 25px;
+            }
         }
     }
     .home-img{

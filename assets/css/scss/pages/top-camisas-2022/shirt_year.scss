@@ -1,6 +1,6 @@
 .c-shirt_year{
     padding: 100px 0px 60px 0px;
-
+    background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/topcamisas/shirt-year/background.jpg');
     .box-text_shirt{
         margin-bottom: 32px;
         .shirt{
@@ -12,7 +12,7 @@
 
             } 
             &-subtitle{
-                font-size: 18px;
+                font-size: 15px;
                 font-weight: 400;
                 line-height: 1rem;
             }
@@ -29,6 +29,7 @@
         padding: 0;
         position: relative;
         min-height: 250px;
+        transition: ease-in-out 1s;
 
         .img-card{
             height: 100%;
@@ -98,5 +99,12 @@
             }
             
         }
+    }
+    .warning-text{
+        color: #000;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        margin-top: 64px;
     }
 }

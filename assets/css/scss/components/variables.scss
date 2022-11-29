@@ -29,3 +29,7 @@ $golden-light: #ECC68E;
 $grey-light: #F6F8FA;
 $grey-dark: #7C7C7C;
 
+
+@mixin md{
+    @media (min-width: 1200px) { @content; }
+}
