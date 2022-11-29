@@ -1047,7 +1047,7 @@ p {
 }
 
 .c-home {
-  background-image: url("./../../../../img/home/background-home.png");
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/topcamisas/home/background-home.png");
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -1081,7 +1081,7 @@ p {
 
 .c-instruction {
   padding: 100px 0px;
-  background-image: url("../../../../img/instruction/background-instruction.png");
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/topcamisas/instruction/background-instruction.png");
   display: flex;
   flex-direction: column;
   align-items: center;
