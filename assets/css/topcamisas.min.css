@@ -1118,7 +1118,93 @@ p {
 }
 
 .c-shirt_year {
-  padding: 60px 0px;
+  padding: 100px 0px 60px 0px;
+}
+.c-shirt_year .box-text_shirt {
+  margin-bottom: 32px;
+}
+.c-shirt_year .box-text_shirt .shirt-title {
+  font-size: 40px;
+  color: #9C7A47;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.c-shirt_year .box-text_shirt .shirt-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1rem;
+}
+.c-shirt_year .row {
+  margin-top: 24px;
+}
+.c-shirt_year .card {
+  width: 18%;
+  margin-right: 24px;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 0;
+  position: relative;
+  min-height: 250px;
+}
+.c-shirt_year .card .img-card {
+  height: 100%;
+  object-fit: cover;
+  transition: ease-in-out 0.6s;
+  filter: grayscale(1);
+  cursor: pointer;
+}
+.c-shirt_year .card .box-redirect {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+}
+.c-shirt_year .card .box-redirect .legend {
+  display: none;
+  font-size: 18px;
+  color: #f1f1f1;
+  text-transform: capitalize;
+  padding: 0px 10px;
+  font-weight: 500;
+  padding-bottom: 8px;
+}
+.c-shirt_year .card .box-redirect .box-buttons {
+  display: none;
+  background-color: #9C7A47;
+  width: 100%;
+  min-height: 45px;
+}
+.c-shirt_year .card .box-redirect .box-buttons .see-more {
+  text-decoration: underline;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.c-shirt_year .card .box-redirect .box-buttons .button-vote {
+  background-color: #fff;
+  padding: 3px 15px;
+  border-radius: 5px;
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.c-shirt_year .card:last-child {
+  margin-right: 0px;
+}
+.c-shirt_year .card:hover .img-card {
+  transform: scale(1.05);
+  filter: none;
+}
+.c-shirt_year .card:hover .legend {
+  display: block;
+}
+.c-shirt_year .card:hover .box-buttons {
+  display: flex;
+  justify-content: space-around;
+  bottom: 0px;
+  align-items: center;
 }
 
 /*# sourceMappingURL=topcamisas.min.css.map */
