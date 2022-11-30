@@ -21,7 +21,7 @@ $vitrine-gray: #747474;
 @import "top-camisas-2022/instruction";
 @import "top-camisas-2022/shirt_year";
 @import "top-camisas-2022/modalSeemore";
-
+@import "top-camisas-2022/modalVote";
 
 @mixin md{
     @media (min-width: 1200px) { @content; }
