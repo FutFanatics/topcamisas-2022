@@ -85,7 +85,7 @@
     <section class="c-shirt_year">
         <div class="container">
             <div class="col-12 box-text_shirt d-flex flex-column align-items-center">
-                <h1 class="shirt-title">Camisas do ano </h1>
+                <p class="shirt-title w-100 d-flex justify-content-center">Camisas do ano </p>
                 <h2 class="shirt-subtitle">Escolha a sua e clique para votar</h2>
             </div>
             <div class="row">
@@ -139,8 +139,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="card">
                     <img class="img-card" src="img/shirt-year/camisa-teste.png">
                     <div class="box-redirect position-absolute">
@@ -191,8 +189,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="card">
                     <img class="img-card" src="img/shirt-year/camisa-teste.png">
                     <div class="box-redirect position-absolute">
@@ -243,8 +239,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="card">
                     <img class="img-card" src="img/shirt-year/camisa-teste.png">
                     <div class="box-redirect position-absolute">
@@ -295,8 +289,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="card">
                     <img class="img-card" src="img/shirt-year/camisa-teste.png">
                     <div class="box-redirect position-absolute">
@@ -1063,18 +1055,70 @@
     <div class="modal c-modalVote" id="modalVote1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
+            <a  class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true">
+                x
+            </a>
             <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <div class="row"> 
+                <div class="col-12 col-md-6 col-img">
+                    <img class="img-modalVote" src="img/shirt-year/camisa-teste.png"> 
+                </div>
+                <div class="col-12 col-md-6 col-content">
+                    <div class="box-title">
+                        <h1 class="content-title">Cadastre-se para<br>concluir a votação</h1>
+                        <p class="content-subtitle">Agora só falta confirmar o voto <br> validando com seus dados.</p>
+                    </div>
+                    <div class="forms-content">
+                        <form action="" method="POST">
+                            <input type="hidden" name="update_mode" value="AS"/>
+                            <input type="hidden" name="form-code" value="80"/>
+                            <input type="hidden" name="isMsg" value="true"/>
+                            <input type="hidden" name="text-confirmation" value="U2V1IHZvdG8gZm9pIGNhZGFzdHJhZG8gY29tIHN1Y2Vzc28h"/>
+                            <input type="hidden" name="text-error" value=""/>
+                            <input type="hidden" name="text-alert" value=""/>
+                            <input type="hidden" name="cmp4" value="Top10Camisas_2021"/>
+                            <input type="hidden" name="ignore-fields" value="on"/>
+                            <input type="hidden" name="phase-change" value="off"/>
+        
+                            <input type="hidden" name="url" value="https://receiver.emkt.dinamize.com/in/301603/1/73cfd/0"/>
+                            <input type="hidden" name="prodId" value=""/>
+                            <input type="hidden" name="prodName" value=""/>
+                            <input type="hidden" name="ano" value="2021"/>
+        
+                            <div class="row">
+                                <div class="form-group col-12 col-md-10">
+                                    <input type="text" name="cmp2" id="cmp2" placeholder="*Nome" required="required" class="form-control" maxlength="80">
+                                </div>
+                                <div class="form-group col-12 col-md-10 mt-2">
+                                    <input type="email" name="cmp1" id="cmp1" placeholder="*E-mail" required="required" class="form-control" maxlength="80">
+                                </div>
+                                <div class="form-group col-12 col-md-10 mt-2">
+                                    <select id="cmp12" name="cmp12" class="form-control" required="required" tabindex="-1">
+                                        <option value="">Times Brasileiros</option>
+                                        {% for time in times_brasileiros %}
+                                            <option value="{{ time }}">{{ time }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-10 mt-2">
+                                    <div class="politica mb-2">
+                                        <label>
+                                            <input type="checkbox" name="politica" id="politica" checked="checked" required="required">
+                                            <span class="icon-checkbox"></span>
+                                            <span>Li e concordo com a <a href="https://www.futfanatics.com.br/politica-de-privacidade" class='alert-privacy' target="_blank">política de privacidade</a></span>
+                                        </label>
+                                    </div>
+                                    <input type="submit" value="Votar" class="btn-vote" />
+                                </div>
+                            </div>
+        
+                            <div class="msg-resp"></div>
+                        </form>
+                    </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

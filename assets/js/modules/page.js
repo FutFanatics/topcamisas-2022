@@ -105,36 +105,116 @@
 		showGomoModal($(this));
 	});
 
-	function showBolaModal($el, $parent = false) {
-		var $modal = $el.parents('.modal');
 
-		if ($parent) {
-			var $modal = $el;
-		} else {
-			var $modal = $el.parents('.modal');
+
+	$('#modal-votar').on('shown.bs.modal', function(e) {
+		$('body').addClass('modal-open');
+		$('.ui-widget.ui-widget-content.ui-autocomplete').css('max-width', $('#modal-votar #cmp12 + .custom-combobox').width() + 'px');
+	});
+
+	$('#modal-votar').on('show.bs.modal', function(e) {
+		var selected = $('.list-camisas .item.selected');
+		$(this).find('input[name="prodId"]').val(selected.data("id"));
+		$(this).find('input[name="prodName"]').val(selected.data("name").replace("<span>", "").replace("</span>", ""));
+		$(this).find('.img-modal').attr("src", selected.find("img").attr("src-modal"));
+	});
+
+	$('#modal-votar form select#cmp12').combobox();
+
+	$('#modal-votar form .custom-combobox input').attr('placeholder', '*Qual time brasileiro você torce?');
+
+	$('#modal-votar form').on('submit', function(event) {
+		event.preventDefault();
+
+		var form = $(this);
+		var formData = form.serialize();
+		var url = 'https://apiinfra.futfanatics.app/voto-top10';
+		// var url = 'http://localhost/api-infra/voto-top10';
+
+		form.find('.msg-resp').html('').removeClass('text-success text-danger text-info').slideUp();
+
+		if (!form.find('select').val()) {
+			form.find('.msg-resp').html('Escolha o seu time.').addClass('text-info').slideDown();
+			return false;
 		}
+	
+		$.post(url, formData, function(response) {
+			if (response.status) {
+				form.find('.msg-resp').html('Boa jogada, e-mail cadastrado com sucesso!').addClass('text-success').slideDown();
 
-		console.log($modal);
+				setTimeout(function() {
+					var selected = $('.list-camisas .item.selected');
 
-		$modal.find(".box-bola").removeClass('active');
-		$modal.find(".box-goma").addClass('active');
-		$modal.find(".next-modal").removeClass("active");
-		$modal.find(".prev-modal").addClass('active');
+					$('#modal-votar').modal('hide');
+					$('.parte1').addClass('d-none');
+
+					$('.parte2').find('img').attr('src', selected.find('img').attr('src-modal')).attr('alt', selected.find('img').attr('alt'));
+					$('.parte2').find('.cupom').html('TOPCAMISAS5<i class="sprite-top10 copy"></i>');
+					$('.parte2').find('.btn-ver').attr('href', selected.data('link'));
+					$('.parte2').removeClass('d-none');
+					$('html, body').animate({
+                		scrollTop: ($('#voto-concluido').offset().top - $('#header').height() - $('.header-nav').height() - 50)
+                		// scrollTop: 0
+            		}, 800);
+				}, 1000);
+			} else {
+				form.find('.msg-resp').html('Desculpe-nos, ocorreu um erro ao cadastrar.').addClass('text-danger').slideDown();
+				console.log('Error form dinamize: ' + response.error_msg.result);
+			}
+		}).fail(function(response) {
+			form.find('.msg-resp').html(response.responseJSON.errorMsg).addClass('text-danger').slideDown();
+		});
+
+		return false;
+	});
+
+	$('.voto-concluido .btn').on('mouseenter', function() {
+		$(this).find('i').addClass('white');
+	}).on('mouseleave', function() {
+		$(this).find('i').removeClass('white');
+	});
+
+	function copyToClipboard(element) {
+		var $temp = $("<input>");
+		$("body").append($temp);
+		$temp.val($(element).text()).select();
+		document.execCommand("copy");
+		$temp.remove();
 	}
 
-	function showGomoModal($el, $parent = false) {
-		if ($parent) {
-			var $modal = $el;
-		} else {
-			var $modal = $el.parents('.modal');
-		}
+	$('.voto-concluido .cupom').on('click', function() {
+		var $el = this
+		copyToClipboard($el);
+		$($el).addClass('copied');
+		setTimeout(function() {
+			$($el).removeClass('copied');
+		}, 3000);
+	});
 
-		console.log($modal);
+	$(document).on('click', '.btn-face', function() {
+		FB.ui({
+			method: 'share',
+			href: 'https://www.futfanatics.com.br/top10camisas2021'
+		}, function(response){});
+	});
 
-		$modal.find(".box-bola").addClass('active');
-		$modal.find(".box-goma").removeClass('active');
-		$modal.find(".prev-modal").removeClass('active');
-		$modal.find(".next-modal").addClass('active');
-	}
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId            : '1765676850403624',
+			autoLogAppEvents : true,
+			xfbml            : true,
+			version          : 'v3.2'
+		});
+	};
+
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "https://connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
+
 })(jQuery);
 

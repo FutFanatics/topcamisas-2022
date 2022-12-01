@@ -1,6 +1,11 @@
 .c-shirt_year{
-    padding: 100px 0px 60px 0px;
+    padding: 60px 0px 60px 0px;
     background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/topcamisas/shirt-year/background.jpg');
+
+    @include md{
+        padding: 100px 0px 60px 0px;
+    }
+
     .box-text_shirt{
         margin-bottom: 32px;
         .shirt{
@@ -9,6 +14,33 @@
                 color: #9C7A47;
                 font-weight: 700;
                 text-transform: uppercase;
+                position: relative;
+
+                &::after{
+                    
+                    @include md{
+                        width: 30%;
+                        background-color: #D3AE78;
+                        height: 1px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 20px;
+                        content: "";
+                    }
+                }
+                &::before{
+                    @include md{
+                        width: 30%;
+                        background-color: #D3AE78;
+                        height: 1px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 20px;
+                        content: "";
+                    }
+                }
 
             } 
             &-subtitle{
@@ -20,16 +52,23 @@
     }
     .row{
         margin-top: 24px;
+        display: flex;
+        justify-content: space-around;
     }
     .card{
-        width:18%;
-        margin-right: 24px;
+        width:48%;
+        margin-bottom: 8px;
         overflow: hidden;
         border-radius: 10px;
         padding: 0;
         position: relative;
         min-height: 250px;
         transition: ease-in-out 1s;
+
+        @include md{
+            margin-bottom: 16px;
+            width:18%;
+        }
 
         .img-card{
             height: 100%;
