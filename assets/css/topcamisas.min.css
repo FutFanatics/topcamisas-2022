@@ -1053,11 +1053,37 @@ p {
   align-items: center;
   position: relative;
   justify-content: center;
-  padding: 30px 0px;
+  padding: 80px 0px;
+  background-size: cover;
 }
 @media (min-width: 1200px) {
   .c-home {
     padding: 0px;
+  }
+}
+.c-home .col-text {
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .c-home .col-text::before {
+    position: absolute;
+    height: 1px;
+    background: radial-gradient(119.18% 4001.93% at -9.36% 50%, #C58F3F 0%, rgba(255, 255, 255, 0) 45.31%, #C58F3F 100%);
+    content: "";
+    width: 100%;
+    top: 10%;
+    right: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .c-home .col-text::after {
+    position: absolute;
+    height: 1px;
+    background: radial-gradient(119.18% 4001.93% at -9.36% 50%, #C58F3F 0%, rgba(255, 255, 255, 0) 45.31%, #C58F3F 100%);
+    content: "";
+    width: 100%;
+    bottom: 10%;
+    right: 0;
   }
 }
 .c-home .title-home {
@@ -1065,7 +1091,7 @@ p {
   font-weight: 700;
   font-size: 35px;
   text-transform: uppercase;
-  padding-bottom: 32px;
+  padding-bottom: 16px;
 }
 @media (min-width: 1200px) {
   .c-home .title-home {
@@ -1094,6 +1120,12 @@ p {
 .c-home .content-home {
   color: #9C7A47;
   font-size: 16px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .c-home .content-home {
+    text-align: start;
+  }
 }
 .c-home .box-selo {
   position: absolute;
@@ -1104,6 +1136,7 @@ p {
 .c-instruction {
   padding: 100px 0px;
   background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/topcamisas/instruction/background-instruction.png");
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1114,6 +1147,7 @@ p {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 18px;
+  text-align: center;
 }
 .c-instruction .text-instruction-strong {
   font-weight: 700;
@@ -1122,6 +1156,18 @@ p {
 .c-instruction .instruction__slick {
   margin-top: 56px;
   justify-content: space-around;
+}
+@media (min-width: 1200px) {
+  .c-instruction .instruction__slick .slick-list {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .c-instruction .instruction__slick .slick-list .slick-track {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .c-instruction .instruction__slick .content-instruction {
   text-align: center;
@@ -1137,11 +1183,21 @@ p {
   position: absolute;
   bottom: -20px;
   color: #F1F1F1;
+  margin: 0 20px;
+  font-size: 14px;
+  border: 1px solid #FFFFFF;
+}
+@media (min-width: 1200px) {
+  .c-instruction .button-instruction {
+    margin: 0;
+    font-size: 18px;
+  }
 }
 
 .c-shirt_year {
   padding: 60px 0px 60px 0px;
   background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/topcamisas/shirt-year/background.jpg");
+  background-size: cover;
 }
 @media (min-width: 1200px) {
   .c-shirt_year {
@@ -1459,6 +1515,14 @@ p {
   text-decoration: underline;
   font-weight: 700;
   font-size: 16px;
+}
+.c-modalVote .col-content .forms-content .vote__back {
+  color: #A0A0A0;
+  text-decoration: underline;
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=topcamisas.min.css.map */

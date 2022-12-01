@@ -1,6 +1,7 @@
 .c-shirt_year{
     padding: 60px 0px 60px 0px;
     background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/topcamisas/shirt-year/background.jpg');
+    background-size: cover;
 
     @include md{
         padding: 100px 0px 60px 0px;

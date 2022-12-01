@@ -13,18 +13,46 @@ p{
     align-items:center ;
     position: relative;
     justify-content: center;
-    padding: 30px 0px;
+    padding: 80px 0px;
+    background-size: cover;
 
     @include md{
         padding: 0px;
     }
+    .col-text{
+        position: relative;
 
+        &::before{
+            @include md{
+                position: absolute;
+                height: 1px;
+                background:radial-gradient(119.18% 4001.93% at -9.36% 50%, #C58F3F 0%, rgba(255, 255, 255, 0) 45.31%, #C58F3F 100%);;
+                content: '';
+                width: 100%;
+                top: 10%;
+                right: 0;
+            }
+            
+        }
+
+        &::after{
+            @include md{
+                position: absolute;
+                height: 1px;
+                background:radial-gradient(119.18% 4001.93% at -9.36% 50%, #C58F3F 0%, rgba(255, 255, 255, 0) 45.31%, #C58F3F 100%);
+                content: '';
+                width: 100%;
+                bottom: 10%;
+                right: 0;
+            }          
+        }
+    }
     .title-home{
         color: #9C7A47;
         font-weight: 700;
         font-size: 35px;
         text-transform: uppercase;
-        padding-bottom: 32px;
+        padding-bottom: 16px;
 
         @include md{
             font-size: 50px;
@@ -53,6 +81,10 @@ p{
     .content-home{
         color: #9C7A47;
         font-size: 16px;
+        text-align: center;
+        @include md{
+            text-align: start;
+        }
     }
     .box-selo{
         position: absolute;
