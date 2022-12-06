@@ -41,6 +41,9 @@ p{
     }
     .col-text{
         position: relative;
+        @include md{
+            margin-left: 16px;
+        }
 
         &::before{
             @include md{
@@ -69,7 +72,7 @@ p{
     }
     .title-home{
         color: #9C7A47;
-        font-weight: 700;
+        font-weight: 900;
         font-size: 35px;
         text-transform: uppercase;
         padding-bottom: 16px;
@@ -77,6 +80,9 @@ p{
         @include md{
             font-size: 50px;
             padding-bottom: 0px;
+        }
+        &_number{
+            line-height: 2rem;
         }
 
         &-top{
@@ -104,6 +110,7 @@ p{
         text-align: center;
         @include md{
             text-align: start;
+            font-size: 17px;
         }
     }
     .box-selo{

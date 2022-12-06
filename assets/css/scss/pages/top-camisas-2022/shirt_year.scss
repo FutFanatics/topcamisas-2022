@@ -90,9 +90,11 @@
             font-size: 18px;
             color: #f1f1f1;
             text-transform: capitalize;
-            padding: 0px 10px;
+            padding: 0px 16px;
             font-weight: 500;
             padding-bottom: 8px;
+            background: linear-gradient(0deg, rgba(00,00,0.6), transparent 100%);
+            padding-top: 16px;
         }
         .box-buttons{
             display: none;
@@ -132,10 +134,10 @@
             }
             .box-buttons{
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
+                padding: 0px 16px;
                 bottom:0px ;
                 align-items: center;
-
             }
             
         }

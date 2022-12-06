@@ -1087,6 +1087,11 @@ p {
   position: relative;
 }
 @media (min-width: 1200px) {
+  .c-home .col-text {
+    margin-left: 16px;
+  }
+}
+@media (min-width: 1200px) {
   .c-home .col-text::before {
     position: absolute;
     height: 1px;
@@ -1110,7 +1115,7 @@ p {
 }
 .c-home .title-home {
   color: #9C7A47;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 35px;
   text-transform: uppercase;
   padding-bottom: 16px;
@@ -1120,6 +1125,9 @@ p {
     font-size: 50px;
     padding-bottom: 0px;
   }
+}
+.c-home .title-home_number {
+  line-height: 2rem;
 }
 .c-home .title-home-top {
   font-weight: 300;
@@ -1147,6 +1155,7 @@ p {
 @media (min-width: 1200px) {
   .c-home .content-home {
     text-align: start;
+    font-size: 17px;
   }
 }
 .c-home .box-selo {
@@ -1211,14 +1220,19 @@ p {
   bottom: -20px;
   color: #F1F1F1;
   margin: 0 20px;
+  display: flex;
   font-size: 14px;
   border: 1px solid #FFFFFF;
+  align-items: center;
 }
 @media (min-width: 1200px) {
   .c-instruction .button-instruction {
     margin: 0;
     font-size: 18px;
   }
+}
+.c-instruction .button-instruction .cart {
+  margin: 0 8px;
 }
 
 .c-shirt_year {
@@ -1309,9 +1323,11 @@ p {
   font-size: 18px;
   color: #f1f1f1;
   text-transform: capitalize;
-  padding: 0px 10px;
+  padding: 0px 16px;
   font-weight: 500;
   padding-bottom: 8px;
+  background: linear-gradient(0deg, rgb(0, 0, 1), transparent 100%);
+  padding-top: 16px;
 }
 .c-shirt_year .card .box-redirect .box-buttons {
   display: none;
@@ -1347,7 +1363,8 @@ p {
 }
 .c-shirt_year .card:hover .box-buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0px 16px;
   bottom: 0px;
   align-items: center;
 }
@@ -1390,7 +1407,7 @@ p {
   }
 }
 .modal_see-more .modal-dialog {
-  max-width: 800px;
+  max-width: 900px;
 }
 .modal_see-more .modal-body {
   background-color: #D9D9D9;

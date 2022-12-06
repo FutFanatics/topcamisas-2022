@@ -59,12 +59,20 @@
         bottom: -20px;
         color: #F1F1F1;
         margin: 0 20px;
+        display: flex;
         font-size: 14px;
         border: 1px solid #FFFFFF;
-
+        align-items: center;
+        
         @include md{
             margin: 0;
             font-size: 18px;
+            
+            
+        
+        }
+        .cart{
+            margin: 0 8px;
         }
     }
 }
