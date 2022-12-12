@@ -49,6 +49,10 @@
         padding-top: 32px;
         display: flex;
         flex-direction: column;
+        
+        @include md{
+            min-height: 460px;
+        }
 
         .content{
             &-title{
@@ -72,7 +76,7 @@
                 line-height: 1.5rem;
                 @include md{
                     font-size: 16px;
-                    text-align: start;
+                    text-align : start;
                 }
             }      
         }
@@ -116,6 +120,96 @@
                 font-weight: 700;
                 cursor: pointer;
             }
+        }
+    }
+    .col-cupom{
+        padding: 24px;
+        padding-top: 32px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+
+        @include md{
+            min-height: 460px;
+            padding-right: 32px;
+        }
+
+        .cupom{
+            &-title{
+                font-size: 24px;
+                text-transform: uppercase;
+                line-height: 2rem;
+                font-weight: 800;
+                letter-spacing: 2px;
+                text-align: center;
+            }
+            &-subtitle{
+                text-align: center;
+                font-size: 16px;
+                line-height: 1.5rem;
+            }
+        }
+        .name-cupom{
+            display: flex;
+            justify-content: space-between;
+            background-color: #FFFFFF;
+            padding:5px 20px 5px 140px;
+            text-decoration: none;
+            color:#717171;
+            font-weight: 700;
+            margin-top: 16px;
+            font-size: 20px;
+            border-radius: 2px;
+            text-transform: uppercase;
+        }
+        .see-more_shirt{
+            background-color: #192C53;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0px;
+            font-weight: 700;
+            text-decoration: none;
+            width: 100%;
+            border: none;
+            margin-top: 16px;
+        }
+        .share-options{
+            display: flex;
+            margin-top: 16px;
+            justify-content: center;
+            .btn-share{
+                background-color: #B1B1B1;
+                border-radius: 10px;
+                border: #FFFFFF 1px solid;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                margin-right: 8px;
+                text-decoration: none;
+
+                &:last-child{
+                    margin-right: 0px;
+                }
+                i{
+                    text-decoration: none;
+                    font-size: 24px;
+                    color: #FFF;
+                }
+            }
+        }
+        .vote__back{
+            color: #A0A0A0;
+            text-decoration: underline;
+            font-size: 14px;
+            margin-top: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        &.active{
+            display: flex;
         }
     }
 }

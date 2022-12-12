@@ -4,11 +4,11 @@
 $vitrine-blue: #192C53;
 $vitrine-gray: #747474;
 
-@import "../_lib/progressive.css";
+//@import "../_lib/progressive.css";
 
 @import "../components/reset-tray";
 
-@import "../fonts/icons-font.css";
+
 @import "../fonts/gotham-book";
 @import "../fonts/gotham-medium";
 @import "../fonts/gotham-bold";
@@ -23,6 +23,7 @@ $vitrine-gray: #747474;
 @import "top-camisas-2022/modalSeemore";
 @import "top-camisas-2022/modalVote";
 
+@import "../fonts/icons-font";
 @mixin md{
     @media (min-width: 1200px) { @content; }
 }

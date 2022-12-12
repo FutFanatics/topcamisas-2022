@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'icons-futfanatics';
-  src:  url('fonts/icons/icons-futfanatics.eot?roql07');
-  src:  url('fonts/icons/icons-futfanatics.eot?roql07#iefix') format('embedded-opentype'),
-    url('fonts/icons/icons-futfanatics.ttf?roql07') format('truetype'),
-    url('fonts/icons/icons-futfanatics.woff?roql07') format('woff'),
-    url('fonts/icons/icons-futfanatics.svg?roql07#icomoon') format('svg');
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?49h1ga');
+  src:  url('fonts/icomoon.eot?49h1ga#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?49h1ga') format('truetype'),
+    url('fonts/icomoon.woff?49h1ga') format('woff'),
+    url('fonts/icomoon.svg?49h1ga#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -12,7 +12,7 @@
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icons-futfanatics' !important;
+  font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -109,17 +109,14 @@
 .icon-facebook1:before {
   content: "\e966";
 }
-.icon-hang-loose:before {
-  content: "\e924";
+.icon-o-neill:before {
+  content: "\e95f";
 }
 .icon-onbongo:before {
   content: "\e960";
 }
 .icon-hurley:before {
   content: "\e961";
-}
-.icon-o-neill:before {
-  content: "\e95f";
 }
 .icon-coca-cola-2:before {
   content: "\e967";
