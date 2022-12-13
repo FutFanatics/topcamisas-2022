@@ -23,6 +23,23 @@
 			}]
 	});
 
+	function copyToClipboard(element) {
+		var $temp = $("<input>");
+		$("body").append($temp);
+		$temp.val($(element).text()).select();
+		document.execCommand("copy");
+		$temp.remove();
+	}
+
+	$('.name-cupom').on('click', function() {
+		var $el = $(this)
+		copyToClipboard($el .find('.cupom'));
+		$($el).addClass('copied');
+		setTimeout(function() {
+			$($el).removeClass('copied');
+		}, 3000);
+	});
+
 	$('.c-modalVote form').on('submit', function(event) {
 		console.log('clickou');
 		event.preventDefault();
@@ -67,22 +84,7 @@
 		return false;
 	});
 
-	function copyToClipboard(element) {
-		var $temp = $("<input>");
-		$("body").append($temp);
-		$temp.val($(element).text()).select();
-		document.execCommand("copy");
-		$temp.remove();
-	}
 
-	$('.voto-concluido .cupom').on('click', function() {
-		var $el = this
-		copyToClipboard($el);
-		$($el).addClass('copied');
-		setTimeout(function() {
-			$($el).removeClass('copied');
-		}, 3000);
-	});
 
 })(jQuery);
 
